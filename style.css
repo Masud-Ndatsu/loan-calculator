@@ -14,7 +14,7 @@ body {
 .container {
   display: grid;
   place-items: center;
-  height: 100%;
+  padding: 2em 0;
 }
 
 .form-container {
@@ -33,28 +33,55 @@ body {
   display: none;
 }
 
-input {
+.form-group input {
   width: 100%;
-  padding: 10px;
-  padding-left: 10%;
-  border: 1px solid #666;
   outline: none;
-  border-radius: 3px;
+  border: none;
+  padding: 0 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-group .btn {
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+}
+.form-group .btn:active {
+  background-color: #222;
 }
 
 .form-group {
-  position: relative;
+  display: flex;
+  align-items: center;
+  outline: 1px solid #ccc;
+  border-radius: 5px;
   margin: 1em 0;
 }
-
+.form-group #years {
+  padding: 10px;
+}
 .input-addon {
   background-color: #ddd;
-  position: absolute;
-  top: 0.5px;
-  bottom: 1px;
-  left: 1px;
-  width: 8%;
-  display: grid;
-  place-content: center;
-  border-radius: 3px 0 0 3px;
+  font-size: 0.825rem;
+  padding: 0.75em;
+  height: 100%;
+  word-wrap: normal;
+}
+
+/* RESULTs */
+.result-item {
+  background-color: #ddd;
+}
+
+.monthly {
+  border-right: 1px solid #ccc;
+  flex: 1.5;
+}
+
+.monthly + input {
+  flex: 3;
 }
