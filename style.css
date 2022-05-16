@@ -33,6 +33,15 @@ body {
   display: none;
 }
 
+.error.active {
+  display: block;
+  background-color: palevioletred;
+  color: #fff;
+  padding: 0.5em;
+  font-size: 0.825em;
+  border-radius: 3px;
+}
+
 .form-group input {
   width: 100%;
   outline: none;
@@ -84,4 +93,9 @@ input::-webkit-inner-spin-button {
 
 .monthly + input {
   flex: 3;
+}
+
+.loading,
+.result {
+  display: none;
 }
